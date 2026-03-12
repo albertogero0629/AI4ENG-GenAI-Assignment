@@ -1,1 +1,16 @@
+Ejercicio 3 (Scikit-Learn): Detección de Anomalías Industriales
+El Problema:
+Trabajas en una fábrica con sensores de maquinaria. Te dan datos de máquinas que operan normalmente (entrenamiento) y necesitas detectar cuando una pieza está defectuosa (anomalía) en datos nuevos, usando un modelo que se entrena solo con ejemplos "buenos".
 
+Tu Misión:
+Escribe una función llamada detectar_piezas_defectuosas(X_train, X_test) que:
+
+Instancie un StandardScaler de sklearn y lo ajuste (fit) solo con X_train.
+
+Escale ambos conjuntos (X_train y X_test).
+
+Instancie un modelo OneClassSVM de sklearn.svm con los parámetros: nu=0.1, kernel='rbf' y gamma='scale'.
+
+Entrene (fit) el modelo con el X_train escalado.
+
+Realice predicciones sobre el X_test escalado y devuelva el array de predicciones de numpy (donde -1 indica anomalía y 1 es normal).
