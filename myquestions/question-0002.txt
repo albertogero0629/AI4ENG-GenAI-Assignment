@@ -1,1 +1,14 @@
+Ejercicio 2 (Pandas): Tasa de Rotación de Inventario
+El Problema:
+En una tienda minorista, necesitas saber qué tan rápido se están vendiendo y reabasteciendo los productos, usando una métrica llamada "Tasa de Rotación", pero debes tener cuidado con los productos descontinuados para no dividir por cero.
 
+Tu Misión:
+Escribe una función llamada calcular_rotacion_inventario(df) que reciba un DataFrame con las columnas product_id, initial_stock, units_sold y restock_units, y realice lo siguiente:
+
+Calcule una columna final_stock igual a: initial_stock - units_sold + restock_units.
+
+Calcule el promedio del inventario como: (initial_stock + final_stock) / 2.
+
+Calcule la columna turnover_rate igual a units_sold dividido entre el promedio del inventario. Nota: Si el promedio del inventario es 0, asigna un turnover_rate de 0 (puedes usar np.where o sentencias condicionales de pandas).
+
+Devuelva el DataFrame resultante ordenado por turnover_rate de mayor a menor, con el índice reiniciado (usando drop=True).
