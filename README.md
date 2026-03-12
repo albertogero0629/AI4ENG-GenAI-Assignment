@@ -1,3 +1,3 @@
 # AI4ENG-GenAI-Assignment
 
-Nombre: Geronimo Alberto Muñoz garcia Correo institucional: geronimo.munoz@udea.edu.co
+Nombre: Geronimo Alberto Muñoz Garcia Correo institucional: geronimo.munoz@udea.edu.co
