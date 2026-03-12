@@ -1,1 +1,16 @@
+Ejercicio 1 (Pandas): Eficiencia y Retrasos en Rutas de Entrega
+El Problema:
+Trabajas en una empresa de logística. Tienes un DataFrame con el registro de entregas y necesitas evaluar el desempeño de las rutas, descartando los envíos fallidos y calculando el retraso promedio de las rutas que tienen un flujo de trabajo estable.
 
+Tu Misión:
+Escribe una función llamada analizar_eficiencia_rutas(df) que:
+
+Filtre las filas donde la columna status sea distinta de 'failed'.
+
+Calcule una nueva columna llamada delay (retraso) definida como actual_duration - planned_duration.
+
+Agrupe los datos por route_id y calcule el promedio de delay y el conteo total de entregas completadas por ruta.
+
+Filtre y conserve únicamente las rutas que tengan al menos 3 entregas completadas.
+
+Devuelva un DataFrame con las rutas restantes, ordenado por el promedio de delay de forma descendente y con el índice reiniciado.
