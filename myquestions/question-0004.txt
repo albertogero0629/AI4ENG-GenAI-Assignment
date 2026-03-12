@@ -1,1 +1,24 @@
+Ejercicio 4 (Scikit-Learn): Búsqueda de Hiperparámetros (RandomizedSearchCV)
+El Problema:
+Tienes un modelo Random Forest que funciona, pero necesitas sintonizar sus hiperparámetros. Hacer combinaciones manuales tarda mucho, así que usarás una búsqueda aleatoria cruzada (Randomized Search).
 
+Tu Misión:
+Escribe una función llamada optimizar_bosque_aleatorio(X, y) que reciba una matriz de características X y etiquetas y, y:
+
+Instancie un RandomForestClassifier con random_state=42.
+
+Configure una búsqueda aleatoria instanciando RandomizedSearchCV de sklearn.model_selection usando:
+
+El estimador RandomForest.
+
+param_distributions = {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20]}.
+
+n_iter=3 (para probar solo 3 combinaciones aleatorias).
+
+cv=3 (validación cruzada de 3 divisiones).
+
+random_state=42.
+
+Ajuste (fit) la búsqueda utilizando X e y.
+
+Devuelva un diccionario que contenga la clave 'mejores_parametros' cuyo valor sea el atributo best_params_ resultante de la búsqueda.
