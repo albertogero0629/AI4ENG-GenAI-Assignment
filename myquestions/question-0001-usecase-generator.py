@@ -11,7 +11,7 @@ def generar_caso_de_uso_analizar_eficiencia_rutas():
         'status': np.random.choice(['completed', 'failed'], 20, p=[0.8, 0.2])
     })
     
-    # Solución esperada internamente
+
     df_valid = df[df['status'] != 'failed'].copy()
     df_valid['delay'] = df_valid['actual_duration'] - df_valid['planned_duration']
     res = df_valid.groupby('route_id').agg(
@@ -20,7 +20,10 @@ def generar_caso_de_uso_analizar_eficiencia_rutas():
     ).reset_index()
     res = res[res['entregas'] >= 3].sort_values('delay_promedio', ascending=False).reset_index(drop=True)
     
-    return {
+
+    caso = {
         "input": {"df": df},
         "output": res
     }
+    
+    return caso, "Analizar la eficiencia de las rutas de transporte"
