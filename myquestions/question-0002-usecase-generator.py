@@ -8,15 +8,16 @@ def generar_caso_de_uso_calcular_rotacion_inventario():
         'units_sold': [80, 50, 0, 150, 5],
         'restock_units': [20, 0, 0, 50, 5]
     })
-    
-    # Solución esperada internamente
+ 
     res = df.copy()
     res['final_stock'] = res['initial_stock'] - res['units_sold'] + res['restock_units']
     avg_stock = (res['initial_stock'] + res['final_stock']) / 2
     res['turnover_rate'] = np.where(avg_stock == 0, 0, res['units_sold'] / avg_stock)
     res = res.sort_values('turnover_rate', ascending=False).reset_index(drop=True)
     
-    return {
+
+    caso_dict = {
         "input": {"df": df},
         "output": res
-    }
+
+    return caso_dict, "Caso de uso: Cálculo de rotación de inventario"
